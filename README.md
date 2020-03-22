@@ -17,6 +17,25 @@ or
 pip3 install .
 ```
 
+To build `pyransac` without installing run:
+
+```bash
+python3 ./setup.py build
+```
+
+This will place the final compiled library inside the `build` folder. To see the exact `pyransac` folder (such as `build/lib.macosx-10.10-x86_64-3.7/pyransac` on a Mac OS X system), just run:
+
+```bash
+dirname `find build -name __init__.py`
+```
+
+You can now either copy that `pyransac` folder into your project or add it into your PYTHONPATH.
+
+To build with a different compiler (like gcc-8) do
+```bash
+CC=gcc-8 python3 ./setup.py build
+```
+
 # Example of usage
 
 ```python
